@@ -1,6 +1,5 @@
 YACC = bison -y -d
 LEX = flex
-CC = cc
 TARGET = hack
 CFLAGS += -std=c11 -Wall
 LIBS =
