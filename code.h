@@ -1,0 +1,61 @@
+#pragma once
+
+#include <stdint.h>
+
+enum {
+  CODE_COMP_ZERO,
+  CODE_COMP_ONE,
+  CODE_COMP_MINUS_ONE,
+  CODE_COMP_D,
+  CODE_COMP_A,
+  CODE_COMP_NOT_D,
+  CODE_COMP_NOT_A,
+  CODE_COMP_MINUS_D,
+  CODE_COMP_MINUS_A,
+  CODE_COMP_D_PLUS_ONE,
+  CODE_COMP_A_PLUS_ONE,
+  CODE_COMP_D_MINUS_ONE,
+  CODE_COMP_A_MINUS_ONE,
+  CODE_COMP_D_PLUS_A,
+  CODE_COMP_D_MINUS_A,
+  CODE_COMP_A_MINUS_D,
+  CODE_COMP_D_AND_A,
+  CODE_COMP_D_OR_A,
+  CODE_COMP_M,
+  CODE_COMP_NOT_M,
+  CODE_COMP_MINUS_M,
+  CODE_COMP_M_PLUS_ONE,
+  CODE_COMP_M_MINUS_ONE,
+  CODE_COMP_D_PLUS_M,
+  CODE_COMP_D_MINUS_M,
+  CODE_COMP_M_MINUS_D,
+  CODE_COMP_D_AND_M,
+  CODE_COMP_D_OR_M,
+};
+
+enum {
+  CODE_DEST_NULL,
+  CODE_DEST_M,
+  CODE_DEST_D,
+  CODE_DEST_MD,
+  CODE_DEST_A,
+  CODE_DEST_AM,
+  CODE_DEST_AD,
+  CODE_DEST_AMD,
+};
+
+enum {
+  CODE_JUMP_NULL,
+  CODE_JUMP_JGT,
+  CODE_JUMP_JEQ,
+  CODE_JUMP_JGE,
+  CODE_JUMP_JLT,
+  CODE_JUMP_JNE,
+  CODE_JUMP_JLE,
+  CODE_JUMP_JMP,
+};
+
+const char *codeAddressToBinary(int32_t);
+const char *codeCompToBinary(int32_t);
+const char *codeDestToBinary(int32_t);
+const char *codeJumpToBinary(int32_t);
