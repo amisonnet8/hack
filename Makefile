@@ -1,8 +1,10 @@
 YACC = bison -y -d
 LEX = flex
-TARGET = hack
+CC := cc
 CFLAGS += -std=c11 -Wall
 LIBS =
+
+TARGET = hack
 
 SRCS := main.c code.c command.c symbol.c hack.c util.c heap.c y.tab.c lex.yy.c
 OBJS := $(SRCS:.c=.o)
